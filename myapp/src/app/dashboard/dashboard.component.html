@@ -1,0 +1,28 @@
+<!-- dashboard.component.html -->
+<div class="dashboard-container">
+  <div class="entrycard">
+    <div class="heading">
+      <div class="textcon">
+        <h2>Welcome to your financial dashboard!</h2>
+        <p> Track your expenses and stay in control of your budget.</p>
+      </div>
+      <img src="/business.png" alt="">
+    </div>
+
+    <button (click)="navigateToexpense()">Expense Calender</button>
+  </div>
+  <div class="expensechart">
+    <h2>Your monthly expenditure trends are ready for review</h2>
+    <p>Let’s make smarter financial decisions together!</p>
+  <div *ngIf="monthlyExpenditures.length > 0">
+    <canvas baseChart [data]="chartData" [options]="chartOptions" chartType="line">
+    </canvas>
+  </div>
+  <div *ngIf="monthlyExpenditures.length === 0">
+    <p>No data available for this year.</p>
+  </div>
+  </div>
+</div>
+<footer class="footer">
+  <p>&copy; 2025 Expense Tracker. All rights reserved.</p>
+</footer>

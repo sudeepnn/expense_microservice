@@ -1,0 +1,44 @@
+<div class="maincon">
+  <div class="topcon">
+    
+      <h2>Your  <span>{{selectedYear}} {{months[selectedMonth]}}</span> Calendar</h2>    
+    
+    <div class="middle">
+      <div class="calendar-grid mt-4 weeksdiv">
+        <div class="calendar-day btn btn-outline-secondary" *ngFor="let day of weekDays">
+          {{ day }}
+        </div>
+      </div>
+  
+      <div class="calendar-grid mt-2">
+        <div class="calendar-day btn btn-outline-secondary" *ngFor="let day of daysInMonth"
+          [ngClass]="{'clickable': day !== null}"
+          (click)="day !== null && openDayModal(day, selectedMonth, selectedYear)">
+          <div>
+            {{ day }}
+            <div *ngIf="transactionsForDay[day]">
+              <strong>{{ transactionsForDay[day] | currency: 'INR' : 'symbol' }}</strong>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    <div class="text-center mt-3 buttons">
+      <button class="mybtn" (click)="prevMonth()">Previous Month</button>
+      <button class="mybtn" (click)="nextMonth()">Next Month</button>
+    </div>
+  </div>
+  <div class="enddiv">
+    <h2>Stay on top of your spending with our expense calendar </h2>
+    <p>Track your transactions day by day!</p>
+    <button (click)="navigateTodashboard()" class="mybtn">Dashboard</button>
+  </div>
+</div>
+<footer class="footer">
+  <p>&copy; 2025 Expense Tracker. All rights reserved.</p>
+</footer>
+
+
+
+

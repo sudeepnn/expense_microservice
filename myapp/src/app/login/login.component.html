@@ -1,0 +1,53 @@
+<!-- login.component.html -->
+<div class="login-container">
+  <div class="sidename">
+    <div class="magicpattern"></div>
+    <h2>Welcome to BudgetBuddy</h2>
+    <p>Take the first step towards financial freedom. Sign up now!</p>
+  </div>
+    <div class="login-box">
+      <h2 class="text-center mb-4">Login</h2>
+      <form (ngSubmit)="onSubmit()">
+        <!-- Email Input -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            [(ngModel)]="loginData.email"
+            name="email"
+            required
+            placeholder="Enter your email"
+          />
+        </div>
+  
+        <!-- Password Input -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            [(ngModel)]="loginData.password"
+            name="password"
+            required
+            placeholder="Enter your password"
+          />
+        </div>
+  
+        <!-- Remember Me Checkbox -->
+        
+  
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary w-100 mybtn">Login</button>
+  
+        <!-- Footer Links -->
+        <div class="footer-links text-center mt-3">
+          <a href="#">Forgot Password?</a> | 
+          <a href="/signup">Create an Account</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  

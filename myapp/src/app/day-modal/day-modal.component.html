@@ -1,0 +1,24 @@
+<div class="maincon">
+<div class="top">
+  <h2 mat-dialog-title>Day {{ data.day }}</h2>
+  <button class="closebtn"  mat-icon-butto (click)="onCancel()" >
+    X
+  </button>
+</div>  
+<div mat-dialog-content>
+  <p >Total expenditure: {{ curval | currency: 'INR' : 'symbol' }}</p>
+  <div class="allitemlist">
+    <div class="oneitemlist" *ngFor="let item of items">
+      <p>{{ item.itemname }}: {{ item.amount | currency: 'INR' : 'symbol' }}</p>
+      <button  class="mybtn1  " (click)="onDeleteItem(item.itemname)">Delete</button>
+    </div>
+  </div>
+  <div class="inputform">
+    <input  class="input-field" [(ngModel)]="newitemname" placeholder="Enter Item Name">
+  <input  class="input-field" [(ngModel)]="newitemamount" type="number" placeholder="Enter Amount">
+  <button  class="addbtn" (click)="onAddItem()">Add Item</button>
+  </div>
+</div>
+
+
+</div>

@@ -1,0 +1,113 @@
+button {
+    margin: 5px;
+  }
+  
+  .maincon{
+    padding: 30px;
+    /* width: fit-content; */
+    
+  }
+
+  #myInput {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  .allitemlist{
+    max-height: 50vh;
+    overflow-y: scroll;
+  }
+  .oneitemlist{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #ccc; */
+    align-items: center;
+  }
+  .top{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .closebtn{
+    position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  }
+  
+  #myInput:focus {
+    border-color: #92a7fd;
+  }
+  .mybtn {
+    background-color: #92a7fd;  /* Set the background color */
+    color: white;  /* Set the text color */
+    border: none;  /* Remove the border */
+    padding: 10px 20px;  /* Add padding */
+    font-size: 16px;  /* Set the font size */
+    cursor: pointer;  /* Change the cursor to a pointer on hover */
+    border-radius: 5px;  /* Optional: Add rounded corners */
+    transition: background-color 0.3s ease;  /* Optional: Smooth transition for hover effect */
+  }
+  
+  .mybtn:hover {
+    background-color: #4f71fa;  /* Darker shade for hover effect */
+  }
+  .mybtn1 {
+    background-color: #fd9292;  /* Set the background color */
+    color: white;  /* Set the text color */
+    border: none;  /* Remove the border */
+    padding: 5px 10px;  /* Add padding */
+    font-size: 12px;  /* Set the font size */
+    cursor: pointer;  /* Change the cursor to a pointer on hover */
+    border-radius: 5px;  /* Optional: Add rounded corners */
+    transition: background-color 0.3s ease;  /* Optional: Smooth transition for hover effect */
+  }
+  
+  .mybtn1:hover {
+    background-color: #fa4f4f;  /* Darker shade for hover effect */
+  }
+  .addbtn{
+    background-color: #9bfd92;  /* Set the background color */
+    color: rgb(0, 0, 0);  /* Set the text color */
+    border: none;  /* Remove the border */
+    padding: 8px 10px;  /* Add padding */
+    font-size: 12px;  /* Set the font size */
+    cursor: pointer;  /* Change the cursor to a pointer on hover */
+    border-radius: 5px;  /* Optional: Add rounded corners */
+    transition: background-color 0.3s ease;  /* Optional: Smooth transition for hover effect */
+  }
+  
+  .addbtn:hover {
+    background-color: #4ffa6b;  /* Darker shade for hover effect */
+  }
+  .inputform {
+    display: flex;              /* This will make the items in the div align in a row */
+    align-items: center;        /* Vertically aligns the items in the center */
+    gap: 10px;                  /* Adds space between the inputs and button */
+  }
+  
+  .input-field {
+    padding: 10px;              /* Adds padding to inputs */
+    font-size: 14px;            /* Font size for the inputs */
+    border: 1px solid #ccc;    /* Adds a border around the input */
+    border-radius: 4px;        /* Rounded corners for inputs */
+    width: 200px;               /* You can adjust the width */
+  }
+  @media (max-width:1000px){
+
+    .inputform{
+      flex-direction: column;
+      width: 70vw;
+    }
+  }
+  

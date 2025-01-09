@@ -1,0 +1,264 @@
+/* Default styles for larger screens */
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F5FAFE;
+}
+
+.month-selector, .year-selector {
+  margin-bottom: 10px;
+}
+
+.calendar-navigation {
+  margin: 10px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 days in a week */
+  gap: 10px;
+  width: 90%;
+  /* max-width: 500px; */
+}
+
+.calendar-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  height: 50px;
+}
+
+.calendar-day:hover {
+  background-color: #ddd;
+}
+
+.row {
+  /* background-color: #4AAD6D; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 20px;
+  gap: 10px;
+}
+
+.monthshead {
+  margin: 10px;
+  padding: 10px;
+  /* display: inline; */
+  display: contents;
+  /* background-color: #4AAD6D; */
+  color: rgb(14, 14, 14);
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+select {
+  /* background-color: #4AAD6D; */
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+}
+
+.yearhead {
+  display: contents;
+  font-size: 25px;
+}
+
+.yearhead input {
+  /* background-color: #4AAD6D; */
+
+  border: none;
+  font-size: 35px;
+  text-align: center;
+  width: min-content;
+  padding: 0;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.circle {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  margin: 20px;
+}
+
+.topholes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.maincon {
+  text-align: center;
+  background-color: #F5FAFE;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.weeksdiv div {
+  background-color: #92a7fd;
+  border: none;
+  color: rgb(252, 252, 252);
+}
+
+.mybtn {
+  background-color: #92a7fd;  /* Set the background color */
+  color: white;  /* Set the text color */
+  border: none;  /* Remove the border */
+  padding: 10px 20px;  /* Add padding */
+  font-size: 16px;  /* Set the font size */
+  cursor: pointer;  /* Change the cursor to a pointer on hover */
+  border-radius: 5px;  /* Optional: Add rounded corners */
+  transition: background-color 0.3s ease;  /* Optional: Smooth transition for hover effect */
+}
+
+.mybtn:hover {
+  background-color: #4f71fa;  /* Darker shade for hover effect */
+}
+
+.topcon {
+  background-color: rgb(255, 255, 255);
+  width: 90%;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.enddiv {
+  margin-top: 20px;
+  padding: 20px;
+  width: 90%;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2em;
+  display: inline;
+  z-index: 1;
+  color: rgb(0, 0, 0);
+}
+
+p {
+  color: #666;
+  font-size: 1.2em;
+  z-index: 1;
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.footer {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px;
+}
+
+.footer p {
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-family: "Poppins", serif;
+  font-weight: 600;
+}
+
+/* Media Query for mobile screens */
+@media (max-width: 768px) {
+  .calendar-container {
+    padding: 10px;
+  }
+
+  .calendar-grid {
+    width: 100%;
+    gap: 5px;
+  }
+
+  .calendar-day {
+    height: 40px; /* Adjust the height of the day box */
+    padding: 5px;
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .calendar-navigation {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .mybtn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .month-selector, .year-selector {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .monthshead, .yearhead {
+    font-size: 18px;
+  }
+
+  .circle {
+    height: 15px;
+    width: 15px;
+  }
+
+  .maincon {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .topcon, .enddiv {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  h2 {
+    font-size: 1.5em; /* Adjust heading size for small screens */
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  select {
+    font-size: 20px;
+  }
+}

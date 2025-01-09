@@ -1,0 +1,90 @@
+<!-- signup.component.html -->
+<div class="signup-container">
+  <div class="sidename">
+    <div class="magicpattern"></div>
+    <h2>Welcome to BudgetBuddy</h2>
+    <p>Take the first step towards financial freedom. Sign up now!</p>
+  </div>
+    <div class="signup-box">
+      <h2 class="text-center mb-4">Sign Up</h2>
+      <form (ngSubmit)="onSubmit()">
+        <!-- Full Name Input -->
+        <div class="mb-3">
+          <!-- <label for="fullName" class="form-label">Full Name</label> -->
+          <input
+            type="text"
+            class="form-control"
+            id="fullName"
+            [(ngModel)]="signupData.username"
+            name="fullName"
+            required
+            placeholder="Enter your full name"
+          />
+        </div>
+  
+        <!-- Email Input -->
+        <div class="mb-3">
+          <!-- <label for="email" class="form-label">Email Address</label> -->
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            [(ngModel)]="signupData.email"
+            name="email"
+            required
+            placeholder="Enter your email"
+          />
+        </div>
+  
+        <!-- Password Input -->
+        <div class="mb-3">
+          <!-- <label for="password" class="form-label">Password</label> -->
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            [(ngModel)]="signupData.password"
+            name="password"
+            required
+            placeholder="Enter your password"
+          />
+        </div>
+  
+        <!-- Confirm Password Input -->
+        <div class="mb-3">
+          <!-- <label for="confirmPassword" class="form-label">Confirm Password</label> -->
+          <input
+            type="password"
+            class="form-control"
+            id="confirmPassword"
+            [(ngModel)]="signupData.confirmPassword"
+            name="confirmPassword"
+            required
+            placeholder="Confirm your password"
+          />
+        </div>
+  
+        <!-- Agree to Terms Checkbox -->
+        <div class="form-check mb-3">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="agreeTerms"
+            [(ngModel)]="signupData.agreeTerms"
+            name="agreeTerms"
+            required
+          />
+          <label class="form-check-label" for="agreeTerms">I agree to the Terms and Conditions</label>
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary w-100 mybtn">Sign Up</button>
+  
+        <!-- Footer Links -->
+        <div class="footer-links text-center mt-3">
+          <a href="/login">Already have an account? Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  
