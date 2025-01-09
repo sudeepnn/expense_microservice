@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 
-mongoose.connect('mongodb://localhost:27017/transactions', )
+mongoose.connect(process.env.MONGODB_URI! )
   .then(() => console.log('MongoDB connected'))
   .catch((error) => console.error('MongoDB connection error:', error));
 app.use("/api/v1",router);
