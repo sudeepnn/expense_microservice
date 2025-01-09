@@ -55,7 +55,7 @@ export class CalendarComponent implements OnInit {
   // Fetch transactions data from the API
   fetchTransactions(): void {
     
-    this.http.get<{ date: string, amount: number }[]>(`http://localhost:3001/api/v1/transcation/user/${this.userid}`)
+    this.http.get<{ date: string, amount: number }[]>(`https://transcation-xa5b.onrender.com/api/v1/transcation/user/${this.userid}`)
       .subscribe(data => {
         this.transactions = data;
         this.updateTransactionsForMonth();

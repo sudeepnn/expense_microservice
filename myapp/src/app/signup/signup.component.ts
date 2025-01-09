@@ -58,7 +58,7 @@ export class SignupComponent {
       password: this.signupData.password
     };
   
-    this.http.post<any>('http://localhost:3002/api/v1/auth/signup', signupPayload)
+    this.http.post<any>('https://users-xts0.onrender.com/api/v1/auth/signup', signupPayload)
       .subscribe({
         next: (response) => {
           this.snackBar.open('Signup successful!', 'Close', { duration: 3000 });

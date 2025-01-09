@@ -32,7 +32,7 @@ export class DayModalComponent {
 
   fetchItems(): void {
     // Get the transaction for the day
-    this.http.get<any>(`http://localhost:3001/api/v1/transaction/${this.userid}/${this.datestr.toISOString().split('T')[0]}`)
+    this.http.get<any>(`https://transcation-xa5b.onrender.com/api/v1/transaction/${this.userid}/${this.datestr.toISOString().split('T')[0]}`)
       .subscribe(data => {
         this.items = data.items || [];
         this.curval=data.amount
@@ -49,7 +49,7 @@ export class DayModalComponent {
       };
       this.newitemamount=0
       this.newitemname=''
-      this.http.post('http://localhost:3001/api/v1/transcation', data)
+      this.http.post('https://transcation-xa5b.onrender.com/api/v1/transcation', data)
         .subscribe(response => {
           this.fetchItems(); // Refresh the item list
         });
@@ -66,7 +66,7 @@ export class DayModalComponent {
       itemname: itemname,
       userid: this.userid
     };
-    this.http.delete(`http://localhost:3001/api/v1/transaction/delete-item/${this.userid}/${this.datestr.toISOString().split('T')[0]}/${itemname}`)
+    this.http.delete(`https://transcation-xa5b.onrender.com/api/v1/transaction/delete-item/${this.userid}/${this.datestr.toISOString().split('T')[0]}/${itemname}`)
       .subscribe(response => {
         this.fetchItems(); // Refresh the item list
       });

@@ -69,7 +69,7 @@ export class DashboardComponent implements OnInit {
     this.fetchMonthlyExpenditure();
   }
   fetchMonthlyExpenditure() {
-    this.http.get<any>(`http://localhost:3001/api/v1/expenses/monthly/${this.userid}`).subscribe(
+    this.http.get<any>(`https://transcation-xa5b.onrender.com/api/v1/expenses/monthly/${this.userid}`).subscribe(
       response => {
         console.log(response.monthlyExpenditures)
         this.monthlyExpenditures = response.monthlyExpenditures;

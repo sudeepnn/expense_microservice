@@ -31,7 +31,7 @@ export class LoginComponent {
       password: this.loginData.password
     };
 
-    this.http.post<any>('http://localhost:3002/api/v1/auth/login', loginPayload)
+    this.http.post<any>('https://users-xts0.onrender.com/api/v1/auth/login', loginPayload)
       .subscribe({
         next: (response) => {
           // Assuming the response contains the JWT token
